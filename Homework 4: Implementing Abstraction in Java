@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author Family
+ */
+public class Main {
+    public static void main (String[] args ){
+        Scanner scanner = new Scanner (System.in);
+        Calculations cal = new Calculations();
+        
+        //Phone sales
+        System.out.println("Please enter item name: ");
+        String itemName = scanner.nextLine();
+        System.out.println("Enter item price: ");
+        int price = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Enter item quantity: ");
+        int ammount = scanner.nextInt();
+        scanner.nextLine();
+                
+        cal.setName(itemName);
+        cal.setPrice(price);
+        cal.setAmmount(ammount);
+        
+        //Repairs
+        System.out.println("Enter service type: ");
+        String serviceType = scanner.nextLine();
+        System.out.println("Enter price per hour: ");
+        int pricePerHour = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Enter hours: ");
+        int hour = scanner.nextInt();
+        scanner.nextLine();
+        
+        cal.setServiceType(serviceType);
+        cal.setHourlyRate(pricePerHour);
+        cal.setHours(hour);
+        
+        cal.calculateSales();
+        
+        int phoneSales = cal.getTotalSales();
+        int repairSales = cal.getRepairSales();
+        
+        System.out.println("Phone sales: "+phoneSales);
+        System.out.println("Repair sales: "+repairSales);
+        
+    }
+}
