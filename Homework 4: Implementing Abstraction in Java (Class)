@@ -1,0 +1,74 @@
+public class Calculations {
+    //Phone Details
+    private String name;
+    private int price;
+    private int ammount;
+    
+    //Repair Details
+    private String serviceType;
+    private int pricePerHour;
+    private int hour;
+    
+    
+    
+    //Getter and Setter methods
+    
+    //SALES
+    public void setName (String name){
+        this.name = name;
+    }
+    public void setPrice (int price){
+        this.price = price;
+    }
+    public void setAmmount (int ammount){
+        this.ammount = ammount;
+    }
+    public String getName(){
+        return name;
+    }
+    public int getPrice(){
+        return price;
+    }
+    public int getAmmount(){
+        return ammount;
+    }
+    //REPAIRS
+    public void setServiceType (String serviceType){
+        this.serviceType = serviceType;
+    }
+    public void setHourlyRate (int pricePerHour){
+        this.pricePerHour = pricePerHour;
+    }
+    public void setHours (int hour){
+        this.hour = hour;
+    }
+    public String getServiceType(){
+        return serviceType;
+    }
+    public int getPricePerHour(){
+        return pricePerHour;
+    }
+    public int getHour(){
+        return hour;
+    }
+    
+    //Phone Sales
+    private int totalSales = 0;
+    private int repairSales = 0;
+    
+    public void calculateSales(){
+        totalSales = price * ammount;
+        repairSales = pricePerHour * hour;
+    }
+    //Get methods for Sales
+    public int getTotalSales(){
+        return totalSales;
+    }
+    public int getRepairSales(){
+        return repairSales;
+    }
+    
+    
+    
+    
+}
