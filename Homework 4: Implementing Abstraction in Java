@@ -8,6 +8,7 @@ public class Main {
     public static void main (String[] args ){
         Scanner scanner = new Scanner (System.in);
         Calculations cal = new Calculations();
+        Calculations_Repair cal_rep = new Calculations_Repair();
         
         //Phone sales
         System.out.println("Please enter item name: ");
@@ -33,14 +34,15 @@ public class Main {
         int hour = scanner.nextInt();
         scanner.nextLine();
         
-        cal.setServiceType(serviceType);
-        cal.setHourlyRate(pricePerHour);
-        cal.setHours(hour);
+        cal_rep.setServiceType(serviceType);
+        cal_rep.setHourlyRate(pricePerHour);
+        cal_rep.setHours(hour);
         
         cal.calculateSales();
+        cal_rep.calculateRepairSales();
         
         int phoneSales = cal.getTotalSales();
-        int repairSales = cal.getRepairSales();
+        int repairSales = cal_rep.getRepairSales();
         
         System.out.println("Phone sales: "+phoneSales);
         System.out.println("Repair sales: "+repairSales);
