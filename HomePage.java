@@ -4,6 +4,8 @@
  */
 package Forms;
 
+import Classes.Employee;
+import Classes.Leave;
 import java.awt.Image;
 import java.io.IOException;
 import javax.swing.ImageIcon;
@@ -20,6 +22,7 @@ public class HomePage extends javax.swing.JFrame {
     public HomePage() {
         initComponents();
         ScaleImage();
+        
     }
     private void ScaleImage(){
         ImageIcon icon = new ImageIcon("C:\\Users\\Family\\Documents\\NetBeansProjects\\MMDC_proj\\src\\main\\java\\Forms\\MotorPH Logo.png");
@@ -58,7 +61,32 @@ public class HomePage extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         AccountTab = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jTextField10 = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jTextField14 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         LeaveTab = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         OvertimeTab = new javax.swing.JPanel();
@@ -66,7 +94,6 @@ public class HomePage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         AttendanceTab = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -195,9 +222,64 @@ public class HomePage extends javax.swing.JFrame {
 
         AccountTab.setBackground(new java.awt.Color(255, 255, 255));
         AccountTab.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        AccountTab.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 120, -1));
+        AccountTab.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 120, -1));
+        AccountTab.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 120, -1));
 
-        jLabel4.setText("Page 2");
-        AccountTab.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, -1, -1));
+        jLabel15.setText("PhilHealth #");
+        AccountTab.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, -1, -1));
+        AccountTab.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 120, -1));
+
+        jLabel20.setText("Basic Salary");
+        AccountTab.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, -1, -1));
+
+        jLabel16.setText("TIN #");
+        AccountTab.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, -1, -1));
+
+        jLabel13.setText("Phone #");
+        AccountTab.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
+
+        jLabel19.setText("Position");
+        AccountTab.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, -1, -1));
+        AccountTab.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 120, -1));
+
+        jLabel5.setText("Birthday");
+        AccountTab.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+        AccountTab.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 120, -1));
+
+        jLabel9.setText("Last Name");
+        AccountTab.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+
+        jLabel12.setText("Address");
+        AccountTab.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+        AccountTab.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 120, -1));
+        AccountTab.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 120, -1));
+
+        jLabel17.setText("PagIbig#");
+        AccountTab.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, -1, -1));
+
+        jLabel14.setText("SSS");
+        AccountTab.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+
+        jLabel11.setText("First Name");
+        AccountTab.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        AccountTab.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 120, -1));
+
+        jLabel21.setText("Hourly Rate");
+        AccountTab.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 230, -1, -1));
+
+        jLabel10.setText("Employee ID");
+        AccountTab.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        AccountTab.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 120, -1));
+        AccountTab.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 120, -1));
+        AccountTab.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 110, 120, -1));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        AccountTab.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 120, -1));
 
         TabbedPanel.addTab("tab2", AccountTab);
 
@@ -227,10 +309,6 @@ public class HomePage extends javax.swing.JFrame {
 
         AttendanceTab.setBackground(new java.awt.Color(255, 255, 255));
         AttendanceTab.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel5.setText("Page 3");
-        AttendanceTab.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, -1, -1));
-
         TabbedPanel.addTab("tab3", AttendanceTab);
 
         getContentPane().add(TabbedPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, -30, 470, 450));
@@ -257,6 +335,22 @@ public class HomePage extends javax.swing.JFrame {
         PayrollBtn.setVisible(false);
         ITBtn.setVisible(false);
     }
+    
+    public void setEmployeeDetails(Employee employee) {
+    jTextField1.setText(employee.getEmployeeID());
+    jTextField2.setText(employee.getFirstName());
+    jTextField3.setText(employee.getLastName());
+    jTextField4.setText(employee.getBirthday());
+    jTextField5.setText(employee.getAddress());
+    jTextField6.setText(employee.getPhoneNum());
+    jTextField7.setText(employee.getSSS());
+    jTextField8.setText(employee.getPhilHealth());
+    jTextField9.setText(employee.getTIN());
+    jTextField10.setText(employee.getPagIbig());
+    jTextField12.setText(employee.getPosition());
+    jTextField13.setText(String.valueOf(employee.getBasicSal()));
+    jTextField14.setText(String.valueOf(employee.getHourlyRate()));
+}
     private void HRBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HRBtnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_HRBtnActionPerformed
@@ -273,6 +367,7 @@ public class HomePage extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         TabbedPanel.setSelectedIndex(1);
+       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -283,6 +378,11 @@ public class HomePage extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         TabbedPanel.setSelectedIndex(3);
+        Leave leave = new Leave();
+        LeavePage leavepage = new LeavePage();
+        leavepage.setVisible(true);
+        leave.setDetails(jTextField2.getText(), jTextField3.getText(), jTextField1.getText());
+        leavepage.setDetails(leave.getFirstName(),leave.getLastName(), leave.getEmployeeId());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -294,6 +394,11 @@ public class HomePage extends javax.swing.JFrame {
         // TODO add your handling code here:
         TabbedPanel.setSelectedIndex(5);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -347,15 +452,39 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    public javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField10;
+    public javax.swing.JTextField jTextField12;
+    public javax.swing.JTextField jTextField13;
+    public javax.swing.JTextField jTextField14;
+    public javax.swing.JTextField jTextField2;
+    public javax.swing.JTextField jTextField3;
+    public javax.swing.JTextField jTextField4;
+    public javax.swing.JTextField jTextField5;
+    public javax.swing.JTextField jTextField6;
+    public javax.swing.JTextField jTextField7;
+    public javax.swing.JTextField jTextField8;
+    public javax.swing.JTextField jTextField9;
     private javax.swing.JLabel label;
     // End of variables declaration//GEN-END:variables
 }
