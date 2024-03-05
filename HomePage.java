@@ -388,6 +388,9 @@ public class HomePage extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
         TabbedPanel.setSelectedIndex(4);
+        OvertimePage overtimepage = new OvertimePage();
+        overtimepage.setVisible(true);
+        overtimepage.setDetails(jTextField2.getText(), jTextField3.getText(), jTextField1.getText());
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
